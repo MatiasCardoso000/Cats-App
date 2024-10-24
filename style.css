@@ -52,6 +52,7 @@ h1 {
   grid-template-columns: repeat(4, 420px);
   row-gap: 50px;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .card {
