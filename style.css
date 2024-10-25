@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(223, 251, 251);
+}
+
 .container {
   width: 100%;
 }
@@ -13,80 +18,120 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border-bottom: 4px solid black;
   position: relative;
+  background-color: rgb(205, 246, 246);
 }
 
 h1 {
   margin-top: 8px;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 48px;
   font-weight: 500;
   text-decoration: underline;
 }
 
 .user-icon-container {
-  border: 2px solid black;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
+  background-color: orange;
 }
 
 .user-icon {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .cards-container {
   display: grid;
   place-items: center;
   justify-content: center;
-  grid-template-columns: repeat(4, 420px);
-  row-gap: 50px;
-  margin-top: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 20px;
   margin-bottom: 50px;
+  row-gap: 20px;
 }
 
 .card {
   border: 2px solid black;
   max-width: max-content;
-  padding-bottom: 30px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
   display: grid;
-  grid-template-rows: 1fr 50px;
-  row-gap: 50px;
+  grid-template-rows: 1fr 150px;
   position: relative;
 }
 
-.card::before,
-.card::after {
-  height: 100px;
-  width: max-content;
-  background-color: black;
-  position: absolute;
+.card img {
+  width: 310px;
+  height: 350px;
+  object-fit: cover;
 }
 
-.card img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border: 2px solid black;
+.cat-info {
+  padding: 0 8px 8px 8px;
+  background-color: white;
+}
+
+.cat-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.cat-name:hover {
+  text-decoration: underline;
+}
+
+.icon-mutual-friends {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.icon-mutual-friends .user-icon-cat-info {
+  display: grid;
+  place-items: center;
+  background-color: orange;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+}
+
+.icon-mutual-friends .user-icon-cat-info .user-icon {
+  height: 35px;
+  width: 35px;
+  object-fit: contain;
+  border: none;
+}
+
+.common-friends {
+  color: #7a7a7a;
+  font-size: 18px;
+  margin-left: 8px;
 }
 
 .add-friend-btn {
   background-color: rgb(28, 156, 248);
   border-radius: 6px;
+  border: none;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  color: white;
+  margin-top: 12px;
+  width: 150px;
+  padding: 12px;
+  transition: background-color 0.15s;
+}
+
+.add-friend-btn:hover {
+  background-color: rgb(73, 170, 240);
 }
